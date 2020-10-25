@@ -6,11 +6,12 @@
         <%= link_to "こんにちわ#{current_user.name}さん" , "/users/#{current_user.id}" %>
         <%= link_to "ログアウト", destroy_user_session_path , class: :greeting__link , method: :delete%>
       </div>
+      <% end %>
     <%# // ログインしているときは上記を表示する %>
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
       <%= render partial: "prototype" , collection: @prototypes %>
     </div>
   </div>
-  <% end %>
+
 </main>
