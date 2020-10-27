@@ -4,7 +4,6 @@
      <% if user_signed_in? %>
       <div class="greeting"> 
         <%= link_to "こんにちわ#{current_user.name}さん" , "/users/#{current_user.id}" %>
-        <%= link_to "ログアウト", destroy_user_session_path , class: :greeting__link , method: :delete%>
       </div>
       <% end %>
     <%# // ログインしているときは上記を表示する %>
